@@ -7,8 +7,8 @@ function App() {
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
   const [dataById, setDataById] = useState([]);
-  const [nameById, setNameById] = useState("");
-  const [descById, setDescById] = useState("");
+  // const [nameById, setNameById] = useState("");
+  // const [descById, setDescById] = useState("");
   const [Images, setImages] = useState(null);
   const [isModalById, setIsModalById] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,7 +48,7 @@ function App() {
 
   const handleSave = async () => {
     if (!name.trim() || !desc.trim()) {
-      alert("Please fill in both Name and Description fields.");
+      console.log("hamasha pur kun");
       return;
     }
 
@@ -67,13 +67,6 @@ function App() {
         method: "POST",
         body: formData,
       });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error("Error:", errorData);
-        return;
-      }
-
       setName("");
       setDesc("");
       setImages(null);
@@ -275,7 +268,7 @@ function App() {
         {isModalById && (
           <div className="fixed inset-0 bg-opacity-50 flex justify-center items-center modal">
             <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 w-full max-w-md">
-              <h2 className="text-2xl font-bold mb-4">Get by ID</h2>
+              <h2 className="text-2xl font-bold mb-4">Get info by ID</h2>
 
               {dataById ? (
                 <div>

@@ -350,13 +350,13 @@ function App() {
               </div>
               <button
                 onClick={() => deleteUser(el.id)}
-                className="bg-red-500 text-white py-1 px-3 rounded-lg hover:bg-red-700 transition"
+                className="bg-red-700 text-white w-[70px] py-1 px-3 rounded-lg hover:bg-red-500 transition"
               >
-                Delete Card
+                Delete
               </button>
               <button
                 onClick={() => openEditModal(el.id, el.name, el.description)}
-                className="bg-yellow-500 text-white py-1 px-3 rounded-lg hover:bg-yellow-700 transition"
+                className="bg-yellow-700 text-white w-[70px] py-1 px-3 rounded-lg hover:bg-yellow-500 transition"
               >
                 Edit
               </button>
@@ -365,9 +365,9 @@ function App() {
                   setId(el.id);
                   setIsModalById(true);
                 }}
-                className="bg-lime-600 text-white py-1 px-3 rounded-lg hover:bg-lime-800 transition"
+                className="bg-lime-800 text-white  w-[70px] py-1 px-3 rounded-lg hover:bg-lime-600 transition"
               >
-                Get by id
+                Info
               </button>
               <input
                 type="checkbox"

@@ -1,0 +1,19 @@
+.modal {
+    z-index: 50;
+  }
+  
+  .card {
+    z-index: 2; 
+    position: relative;
+  }
+  
+  .card img {
+    z-index: 1; 
+    position: relative;
+  }
+  
+  .card .delete-btn {
+    z-index: 4; 
+    position: absolute;
+  }
+  
